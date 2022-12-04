@@ -715,7 +715,7 @@ transition: text-shadow 250ms var(--cubic);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .form {
     width: 100%; 
