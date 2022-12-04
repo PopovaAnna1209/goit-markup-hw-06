@@ -198,6 +198,8 @@ border-bottom: 1px solid #ECECEC;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     background-repeat: no-repeat;
     text-align: Center;
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 200px 0px;
 }
 
@@ -480,12 +482,13 @@ border-bottom: 1px solid #ECECEC;
 .footer-container {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
 }
-
-.footer-contacts {
-    margin-right: 70px;
+.footer-contacts-all {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
 }
-
 .footer-logo {
     display: inline-block;
     font-family: Raleway;
@@ -538,8 +541,7 @@ border-bottom: 1px solid #ECECEC;
     display: inline-block;
     align-items: center;
     justify-content: center;
-    margin-right: 93px;
-    
+   
 }
 
 .footer-title {
@@ -588,13 +590,30 @@ border-bottom: 1px solid #ECECEC;
     fill: var(--primary-white-color);
     transition: fill 250ms var(--cubic);
 }
-.footer-form-btn {
-display: flex;
+.form-footer-subscription {
+    width: 570px;
+    height: 86px;
+}
+.footer-subscription-label {
+display: inline-block;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.17;
+text-align: left;
+letter-spacing: 0.03em;
+color: var(--primary-white-color);
+margin-bottom: 20px;
+}
+
+.footer-input-btn {
+display: inline-flex;
+width: 100%;
 gap: 12px;
 }
 
 .footer-subscription-input {
-width: 358px;
+display: flex;
+min-width: 358px;
 height: 50px;
 border: 1px solid rgba(255, 255, 255, 0.3);
 border-radius: 4px;
@@ -604,17 +623,30 @@ background-color: transparent;
 padding: 15px 16px;
 transition: border-color 250ms var(--cubic);
 
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--primary-white-color);
 }
+
 .footer-subscription-input:hover,
 .footer-subscription-input:focus {
     border-color: var(--accent-color);
+  }
+
+.footer-subscription-input:hover::placeholder,
+.footer-subscription-input:focus::placeholder {
+color: var(--accent-color);
 }
+
 .footer-subscription-input::placeholder {
 font-size: 16px;
 line-height: 1.25;
 text-align: left;
 letter-spacing: 0.03em;
+transition: color 250ms var(--cubic);
 }
+
 .btn-footer-submit {
 display: flex;
 font-family: inherit;
@@ -689,6 +721,7 @@ transition: text-shadow 250ms var(--cubic);
     width: 100%; 
 }
 .modal-label {
+    display: inline-block;
     font-size: 12px;
     line-height: 1.17;
     text-align: left;
@@ -696,8 +729,9 @@ transition: text-shadow 250ms var(--cubic);
     color: var(--primary-text-color);
     margin-bottom: 4px;
 }
+
 .form-field {
-margin-bottom: 28px;
+margin-bottom: 10px;
 }
 
 .form-field-input {
@@ -750,7 +784,6 @@ transition: border-color 250ms var(--cubic);
     text-align: left;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
-    margin-bottom: 4px;
     transition: border-color 250ms var(--cubic);
 }
 
@@ -767,6 +800,7 @@ transition: border-color 250ms var(--cubic);
     color: rgba(117, 117, 117, 0.5);
 }
 .form-field-check {
+    position: relative;
     margin-bottom: 30px;
 }
 .check-label {
@@ -777,6 +811,7 @@ letter-spacing: 0.03em;
 color: var(--primary-text-color);
 display: flex;
 align-items: center;
+justify-content: center;
 }
 .check-label span {
 width: 16px;
@@ -789,6 +824,10 @@ align-items: center;
 justify-content: center;
 fill: transparent;
 transition: fill 250ms var(--cubic);
+}
+.check-input {
+top: 13px;
+left: 57px;
 }
 
 .check-input:checked + .check-label span {
@@ -808,6 +847,7 @@ fill: var(--primary-white-color);
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);

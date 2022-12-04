@@ -230,8 +230,9 @@
     </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-container">
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-contacts-all">
             <div class="footer-contacts">
                 <a class="footer-logo" href="/index.html"><span class="web">Web</span>Studio</a>
                 <address>
@@ -276,21 +277,21 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-subscription">
-                <p class="footer-title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
-                <div class="footer-form-btn">
-                    <form class="form-footer-subscription">
-                        <input class="footer-subscription-input" type="text" name="name" id="name" placeholder="E-mail">
-                    </form>
+        </div>
+        <form class="form-footer-subscription">
+                <label class="footer-subscription-label" for="subscription">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</label>
+                <div class="footer-input-btn">
+                    <input class="footer-subscription-input" type="text" name="email" id="subscription"
+                        placeholder="E-mail" required />
                     <button class="btn-footer-submit" type="submit">Підписатися
                         <svg class="icon-send" width="24" height="24">
                             <use href="./images/icons.svg#icon-send"></use>
                         </svg>
                     </button>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </form>
+    </div>
+</footer>
 </body>
 
 </html>
