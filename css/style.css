@@ -634,16 +634,17 @@ color: var(--primary-white-color);
     border-color: var(--accent-color);
   }
 
-.footer-subscription-input:hover::placeholder,
+/*.footer-subscription-input:hover::placeholder,
 .footer-subscription-input:focus::placeholder {
 color: var(--accent-color);
-}
+}*/
 
 .footer-subscription-input::placeholder {
 font-size: 16px;
 line-height: 1.25;
 text-align: left;
 letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
 transition: color 250ms var(--cubic);
 }
 
